@@ -1,0 +1,23 @@
+{
+  "name": "postit",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "react": "^16.2.0",
+    "react-dnd": "^2.5.4",
+    "react-dnd-html5-backend": "^2.5.4",
+    "react-dnd-mouse-backend": "^0.1.1",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.1",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

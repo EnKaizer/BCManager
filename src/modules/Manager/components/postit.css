@@ -1,0 +1,28 @@
+.postit {
+    max-width: 200px;
+    position: relative;
+    background: #ffff00;
+    padding: 20px;
+    word-wrap: break-word;
+    transition: all 1s ease-in-out;
+}
+.postit:before, .postit:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+.postit:before {
+    bottom: 0;
+    right: 0;
+    border-width: 20px 20px 0 0;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.1) transparent;
+}
+.postit:after {
+    bottom: 0;
+    right: 0;
+    border-width: 0 0 20px 20px;
+    border-style: solid;
+    border-color: #fff transparent;
+}
