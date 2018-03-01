@@ -8,6 +8,8 @@ import HTML5Backend from 'react-dnd-html5-backend';
 import MouseBackEnd from 'react-dnd-mouse-backend'
 import { DragDropContext } from 'react-dnd';
 import Manager from './modules/Manager';
+import Store from './modules/Store'
+
 class App extends Component {
     state = {headerZ: 0, minHeader: false}
     componentDidMount = () => {
@@ -81,6 +83,7 @@ class App extends Component {
                                     &nbsp;
                                 </div>
                                 <Manager/>
+                                <Store />
                             </section>
 
                         </div>
