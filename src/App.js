@@ -8,7 +8,12 @@ import HTML5Backend from 'react-dnd-html5-backend';
 import MouseBackEnd from 'react-dnd-mouse-backend'
 import { DragDropContext } from 'react-dnd';
 import Manager from './modules/Manager';
+
+// Create an enhanced history that syncs navigation events with the store
+
 class App extends Component {
+
+
     state = {headerZ: 0, minHeader: false}
     componentDidMount = () => {
         const elem = ReactDOM.findDOMNode(this.elementToScroll);
@@ -63,6 +68,7 @@ class App extends Component {
 
     render() {
         return (
+
             <div onScroll={() => console.log('oi')} ref={element => this.elementToScroll1 = element} className="App">
                 <div onScroll={() => console.log('oi')} ref={element => this.elementToScroll2 = element}
                      id="scroll-animate">
@@ -87,6 +93,7 @@ class App extends Component {
                     </div>
                 </div>
             </div>
+
         );
     }
 }
