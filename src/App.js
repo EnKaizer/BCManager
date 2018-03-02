@@ -11,8 +11,6 @@ import Manager from './modules/Manager';
 import Store from './modules/Store'
 
 class App extends Component {
-
-
     state = {headerZ: 0, minHeader: false}
     componentDidMount = () => {
         const elem = ReactDOM.findDOMNode(this.elementToScroll);
