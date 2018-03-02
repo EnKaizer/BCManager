@@ -9,6 +9,8 @@ import Preview from './preview';
 const cardSource = {
     beginDrag(props) {
         return {
+            oldId: props.oldColId,
+            id: props.id,
             text: props.text
         };
     },
@@ -51,7 +53,16 @@ class PostIt extends Component {
         const {isDragging, connectDragSource, text} = this.props;
         return connectDragSource(
             <div>
-                <div style={{opacity: isDragging ? 0.5 : 1, cursor: 'move'}} className="postit">{text}</div>
+                <div style={{opacity: isDragging ? 0.5 : 1, cursor: 'move'}} className="postit">
+                    <div className="containerTitle">
+                        <label>Titulo</label>
+                        <span className="titlePostit">Title</span>
+                    </div>
+                    <div className="containerDesc">
+                        <label>Descrição</label>
+                        <span className="textPostit">{text}</span>
+                    </div>
+                </div>
                 <Preview text={text}/>
             </div>, {dropEffect: 'move'}
         );

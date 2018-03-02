@@ -48,7 +48,18 @@ class ItemPreview extends Component {
         return (
             <div style={layerStyles}>
                 <div style={getItemStyles(this.props)}>
-                    <div className="postit">{this.props.text}</div>
+                    <div>
+                        <div className="postit">
+                            <div className="containerTitle">
+                                <label>Titulo</label>
+                                <span className="titlePostit">Title</span>
+                            </div>
+                            <div className="containerDesc">
+                                <label>Descrição</label>
+                                <span className="textPostit">{this.props.text}</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         );

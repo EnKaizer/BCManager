@@ -11,6 +11,8 @@ import Manager from './modules/Manager';
 import Store from './modules/Store'
 
 class App extends Component {
+
+
     state = {headerZ: 0, minHeader: false}
     componentDidMount = () => {
         const elem = ReactDOM.findDOMNode(this.elementToScroll);
@@ -65,6 +67,7 @@ class App extends Component {
 
     render() {
         return (
+
             <div onScroll={() => console.log('oi')} ref={element => this.elementToScroll1 = element} className="App">
                 <div onScroll={() => console.log('oi')} ref={element => this.elementToScroll2 = element}
                      id="scroll-animate">
@@ -90,6 +93,7 @@ class App extends Component {
                     </div>
                 </div>
             </div>
+
         );
     }
 }

@@ -5,6 +5,7 @@
     padding: 20px;
     word-wrap: break-word;
     transition: all 1s ease-in-out;
+    margin: 12px;
 }
 .postit:before, .postit:after {
     content: '';
@@ -25,4 +26,34 @@
     border-width: 0 0 20px 20px;
     border-style: solid;
     border-color: #fff transparent;
+}
+
+.containerTitle {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-bottom: 10px;
+}
+
+.containerDesc {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.containerDesc label{
+    word-break: break-all;
+    word-wrap: break-word;
+    margin-right: 15px;
+    width: 100%;
+}
+
+.containerDesc span{
+    word-break: break-all;
+    word-wrap: break-word;
+    margin-right: 15px;
+    width: 100%;
 }

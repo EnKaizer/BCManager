@@ -6,10 +6,6 @@
     font-style: normal;
   }
   
-  :root {
-    font-size: 16px;
-  }
-  
   body {
     background: #F0EFED;
     font-family: 'ProximaNova-Regular', Helvetica neue, sans-serif;
@@ -84,19 +80,6 @@
     background-position: center;
   }
   
-  /* .card-profile_visual:before,
-  .card-profile_visual:after {
-    display: block;
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 0;
-    background-image: url(http://www.boletimnerd.com.br/wp-content/uploads/2017/10/Dragon-Ball-Super-Nova-Transformacao-Goku-1.png);
-    background-repeat: no-repeat ;
-    background-position: center;
-  } */
-  
   .card-profile_user-infos {
     position: absolute;
     z-index: 3;
@@ -108,7 +91,7 @@
     text-align: center;
   }
   
-  button {
+  .buttonCard {
     width: 104px;
     height: 40px;
     position: absolute;
@@ -129,13 +112,13 @@
       backface-visibility: hidden;
   }
   
-  button span {
+  .buttonCard span {
     display: inline-block;
     color: #fff;
       width: 100%;
     height: 100%;
     font-size: 16pt;
-    line-height: 2.3;
+    line-height: 2.5;
       -webkit-transition: all 0.3s;
       -webkit-backface-visibility: hidden;
       -moz-transition: all 0.3s;
@@ -144,7 +127,7 @@
       backface-visibility: hidden;
   }
   
-  button:before {
+  .buttonCard:before {
       position: absolute;
       height: 100%;
       width: 100%;
@@ -153,27 +136,27 @@
       transition: all 0.3s;
   }
   
-  button:active:before {
+.buttonCard:active:before {
       color: #5CACEE;
   }
   
-  button:hover span {
+  .buttonCard:hover span {
       -webkit-transform: translateY(-118%);
       -moz-transform: translateY(-118%);
       -ms-transform: translateY(-118%);
       transform: translateY(-118%);
   }
   
-  button:before {
+  .buttonCard :before {
       left: -100%;
       top: 0;
   }
   
-  button:hover:before {
+  .buttonCard:hover:before {
       left: 0;
   }
   
-  button:after {
+  .buttonCard:after {
     content:''; 
     font-style: normal;
     position: absolute;
@@ -225,7 +208,7 @@
     text-align: center;
   }
   
-  strong {
+  .strongCard {
     display: block;
     float: left;
     clear: both;
@@ -235,14 +218,7 @@
     font-weight: 500;
     letter-spacing: -0.2px;
   }
-  
-  label {
-    font-size: 26px;
-    color: #fff;
-    padding: .50em 0;
-    display: inline-block;
-  }
-  
+    
   .product{
     display: flex;
     justify-content: center;

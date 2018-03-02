@@ -15,7 +15,7 @@ class Card extends Component {
                         <img src={img} alt={!img && 'logo'}/>
                     </div>
                     <div className="card-profile_user-infos">
-                        <button>
+                        <button className="buttonCard">
                             <FontAwesome style={{fontSize: fontSize || '36px', marginTop: '-4px'}} name="plus"/>
                             <span>{points || 0}&nbsp;Pt</span>
                         </button>
@@ -26,7 +26,7 @@ class Card extends Component {
                         </div>
                         <div className="stats-holder">  
                             <div className="user-stats">
-                                <strong>{description || <i>Sem Descrição</i>}</strong>
+                                <strong className="strongCard">{description || <i>Sem Descrição</i>}</strong>
                             </div>
                         </div>
                     </div>
