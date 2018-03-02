@@ -7,11 +7,11 @@ class Card extends Component {
         super(props)
     }
     render(){
-        const {img, points, title, description, fontSize, width} = this.props
+        const {img, points, title, description, fontSize, width, backgroundColor} = this.props
         return(
             <div className="container">
                 <div className="card-profile">
-                    <div className="card-profile_visual">
+                    <div style={{backgroundColor: backgroundColor}} className="card-profile_visual">
                         <img src={img} alt={!img && 'logo'}/>
                     </div>
                     <div className="card-profile_user-infos">

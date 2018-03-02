@@ -18,7 +18,7 @@ class GridContainer extends Component {
         const {cols} = this.state
         const {gridRowGap, gridColumnGap} = this.props
         return(
-            <div style={{gridTemplateColumns: cols, gridRowGap: gridRowGap || '340px', gridColumnGap: gridColumnGap || '10px'}} className="containerCard">
+            <div style={{gridTemplateColumns: cols, gridRowGap: gridRowGap || '390px', gridColumnGap: gridColumnGap || '10px'}} className="containerCard">
                 {this.props.children}
             </div>  
         )

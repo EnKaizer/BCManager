@@ -75,6 +75,7 @@
     width: 100%;
     height: auto;
     position: absolute;
+    transform: translateY(-15%);
     z-index: 0;
     background-repeat: no-repeat ;
     background-position: center;
