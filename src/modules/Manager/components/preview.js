@@ -5,6 +5,7 @@
 import React, {Component} from 'react';
 import DragLayer from 'react-dnd/lib/DragLayer';
 import './postit.css';
+import {Rating} from '../../../components';
 function collect(monitor) {
     var item = monitor.getItem();
     return {
@@ -57,6 +58,10 @@ class ItemPreview extends Component {
                             <div className="containerDesc">
                                 <label>Descrição</label>
                                 <span className="textPostit">{this.props.text}</span>
+                            </div>
+                            <div className="containerDesc">
+                                <label>Avaliação</label>
+                                <Rating rate={3}/>
                             </div>
                         </div>
                     </div>
