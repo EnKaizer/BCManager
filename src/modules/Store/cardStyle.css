@@ -16,10 +16,7 @@
   }
   
   .containerCard {
-    display: grid; 
-    grid-template-columns: 18% 18% 18% 18%; 
-    grid-row-gap: 340px;
-    grid-column-gap: 10px;
+    display: grid;  
     margin-top: 15%;
     margin-bottom: 15%;
     justify-content: center;

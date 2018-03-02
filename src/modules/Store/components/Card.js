@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import FontAwesome from 'react-fontawesome'
 import '../cardStyle.css'
 
 class Card extends Component {
@@ -15,7 +16,7 @@ class Card extends Component {
                     </div>
                     <div className="card-profile_user-infos">
                         <button>
-                            <span><i className="fa fa-cart-plus" style={{fontSize: fontSize || '36px', marginTop: '-4px'}}></i></span>
+                            <FontAwesome style={{fontSize: fontSize || '36px', marginTop: '-4px'}} name="plus"/>
                             <span>{points || 0}&nbsp;Pt</span>
                         </button>
                     </div>
