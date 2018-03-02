@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 import "./postit.css";
 import {DragSource} from 'react-dnd';
 import Preview from './preview';
-
+import {Rating} from '../../../components';
 const cardSource = {
     beginDrag(props) {
         return {
@@ -61,6 +61,10 @@ class PostIt extends Component {
                     <div className="containerDesc">
                         <label>Descrição</label>
                         <span className="textPostit">{text}</span>
+                    </div>
+                    <div className="containerDesc">
+                        <label>Avaliação</label>
+                        <Rating rate={3}/>
                     </div>
                 </div>
                 <Preview text={text}/>

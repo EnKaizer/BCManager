@@ -1,0 +1,17 @@
+.containerRanting {
+    display: flex;
+}
+
+.rating {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    height: 22px;
+    width: 22px;
+}
+
+.inactive {
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_TQcaPQgRpszvwsoaPbOt4_I7yGRDSP8YoibunBp-fbaGcaud');
+}
+
+.active{
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('https://thumbs.dreamstime.com/b/painting-close-up-vivid-turquoise-light-green-color-paint-brush-strokes-texture-interesting-creative-imaginative-86714948.jpg');
+}
