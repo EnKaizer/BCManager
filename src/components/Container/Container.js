@@ -8,6 +8,7 @@ import HTML5Backend from 'react-dnd-html5-backend';
 import MouseBackEnd from 'react-dnd-mouse-backend';
 import { DragDropContext } from 'react-dnd';
 import { Link } from 'react-router-dom';
+import { Profile } from '../../../src/modules/Profile/components';
 
 class Container extends Component {
   state = { headerZ: 0, minHeader: false };
@@ -98,9 +99,10 @@ class Container extends Component {
                     <Link to={this.props.to}>{this.props.link}</Link>
                   </div>
                 ) : (
-                  <h1>Header</h1>
+                  <Profile />
                 )}
               </header>
+
               <div>oix</div>
               <section className="content">
                 {this.props.spacer ? (
