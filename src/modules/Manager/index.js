@@ -4,34 +4,7 @@ import Column from './components/column';
 import {connect} from 'react-redux';
 import {Actions} from './ducks';
 
-const props = [{
-    id: 1,
-    tasks: [{
-        id:1,
-        text: 1
-    }]
-},
-    {
-        id: 2,
-        tasks: [{
-            id:2,
-            text: 1
-        }]
-    },
-    {
-        id: 3,
-        tasks: [{
-            id:3,
-            text: 1
-        }]
-    }];
-
 class Manager extends Component {
-
-    state={
-        col: props
-    };
-
     onChangeTask = (task, id) => {
         let arrayCol = [...this.state.tasks];
         arrayCol.map(col => {
@@ -41,7 +14,6 @@ class Manager extends Component {
     };
 
     render(){
-        console.log(this.props);
         return(
             <div className="columnContainer">
                 {this.props.columnList.map(col => {

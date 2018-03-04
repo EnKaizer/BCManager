@@ -101,7 +101,6 @@ class Container extends Component {
                   <h1>Header</h1>
                 )}
               </header>
-              <div>oix</div>
               <section className="content">
                 {this.props.spacer ? (
                   <div>
