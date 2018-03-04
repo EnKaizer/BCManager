@@ -27,7 +27,8 @@ const DropTargetColumn = {
     drop(props, monitor, component) {
         // Obtain the dragged item
         const item = monitor.getItem();
-        console.log({props, monitor, component, item});
+        console.log({props, monitor, component, item})
+        component.props.onChange(item, component.props.id, item.oldId);
         // You can also do nothing and return a drop result,
         // which will be available as monitor.getDropResult()
         // in the drag source's endDrag() method
@@ -58,7 +59,14 @@ class Column extends Component {
         const { isOver, canDrop, connectDropTarget } = this.props;
 
         return connectDropTarget(
-            <div className="column">To Do <div><PostIt text="UIDSAJISDBSDAJBDSAJDBSJDSJIBASDISBDIJDSA"/></div></div>
+            <div className="column">
+                <span>To Do </span>
+                <div>
+                    {this.props.tasks.map(task => {
+                        return <PostIt oldColId={this.props.id} id={task.id} text="UIDSAJISDBSDAJBDSAJDBSJDSJIBASDISBDIJDSA"/>
+                    })}
+                </div>
+            </div>
         )
     }
 
