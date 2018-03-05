@@ -2,6 +2,7 @@
   "name": "postit",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://enkaizer.github.io/bcmanager",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "chart.js": "^2.7.2",
@@ -33,7 +34,9 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.14",
@@ -42,6 +45,7 @@
     "@storybook/react": "^3.3.14",
     "babel-core": "^6.26.0",
     "css-loader": "^0.28.10",
+    "gh-pages": "^1.1.0",
     "style-loader": "^0.20.2"
   }
 }
