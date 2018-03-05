@@ -55,6 +55,10 @@ const Tasks = props => {
   );
 };
 
-Tasks.propTypes = {};
+Tasks.propTypes = {
+  changeGraphDate: PropTypes.func.isRequired,
+  activedButtonDate: PropTypes.number.isRequired,
+  data: PropTypes.objectOf(PropTypes.any),
+};
 
 export default Tasks;

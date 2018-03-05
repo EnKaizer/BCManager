@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DashboardView from './DashboardView';
 import data from '../../utils/data/tasks/data';
+import projects from '../../utils/data/projects/projects';
 
 class DashboardController extends Component {
   constructor(props) {
@@ -21,6 +22,7 @@ class DashboardController extends Component {
         {...this.state}
         changeGraphDate={this.changeGraphDate}
         data={data}
+        projects={projects}
       />
     );
   }
