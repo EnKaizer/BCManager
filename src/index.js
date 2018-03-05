@@ -7,12 +7,14 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import ReduxThunk from 'redux-thunk';
 import { ManagerReducer } from './modules/Manager/ducks';
+import { StoreReducer } from './modules/Store/reducers/reducer';
 
 import Route from './Route';
 
 const store = createStore(
   combineReducers({
     ManagerReducer,
+    StoreReducer,
   }),
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
   applyMiddleware(ReduxThunk),
