@@ -3,5 +3,5 @@
  */
 import Rating from './Rating/Rating';
 import Container from './Container/Container';
-
-export { Rating, Container };
+import Input from './Input/Input'
+export { Rating, Container, Input };
