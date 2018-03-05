@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import ReduxThunk from 'redux-thunk';
 import { ManagerReducer } from './modules/Manager/ducks';
 import { StoreReducer } from './modules/Store/reducers/reducer';
-import 'bootstrap/dist/css/bootstrap.css';
+//import 'bootstrap/dist/css/bootstrap.css';
 
 import Route from './Route';
 
