@@ -53,15 +53,15 @@ class ItemPreview extends Component {
                         <div className="postit">
                             <div className="containerTitle">
                                 <label>Titulo</label>
-                                <span className="titlePostit">Title</span>
+                                <span className="titlePostit">{this.props.name}</span>
                             </div>
                             <div className="containerDesc">
                                 <label>Descrição</label>
-                                <span className="textPostit">{this.props.text}</span>
+                                <span className="textPostit">{this.props.description}</span>
                             </div>
                             <div className="containerDesc">
                                 <label>Avaliação</label>
-                                <Rating rate={3}/>
+                                <Rating rate={this.props.evaluation ? this.props.evaluation : 0}/>
                             </div>
                         </div>
                     </div>

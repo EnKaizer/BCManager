@@ -5,13 +5,10 @@ import React, {Component} from 'react';
 import "./postit.css";
 import {DragSource} from 'react-dnd';
 import Preview from './preview';
-import {Rating} from '../../../components';
+import {Rating, ModalPostIt} from '../../../components';
 const cardSource = {
     beginDrag(props) {
-        return {
-            oldId: props.oldColId,
-            id: props.id,
-            text: props.text
+        return {...props
         };
     },
     isDragging(props, monitor) {
@@ -50,24 +47,24 @@ class PostIt extends Component {
 
 
     render() {
-        const {isDragging, connectDragSource, text} = this.props;
+        const {isDragging, connectDragSource, description, name,evaluation, color} = this.props;
         return connectDragSource(
             <div>
-                <div style={{opacity: isDragging ? 0.5 : 1, cursor: 'move'}} className="postit">
+                <div style={{opacity: isDragging ? 0.5 : 1, cursor: 'move', color}} className="postit">
                     <div className="containerTitle">
                         <label>Titulo</label>
-                        <span className="titlePostit">Title</span>
+                        <span className="titlePostit">{name}</span>
                     </div>
                     <div className="containerDesc">
                         <label>Descrição</label>
-                        <span className="textPostit">{text}</span>
+                        <span className="textPostit">{description}</span>
                     </div>
                     <div className="containerDesc">
                         <label>Avaliação</label>
-                        <Rating rate={3}/>
+                        <Rating rate={evaluation ? evaluation : 0}/>
                     </div>
                 </div>
-                <Preview text={text}/>
+                <Preview {...this.props}/>
             </div>, {dropEffect: 'move'}
         );
     }

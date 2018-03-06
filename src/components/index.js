@@ -4,4 +4,5 @@
 import Rating from './Rating/Rating';
 import Container from './Container/Container';
 import Input from './Input/Input'
-export { Rating, Container, Input };
+import ModalPostIt from './ModalPostIt/ModalPostIt';
+export { Rating, Container, Input, ModalPostIt };

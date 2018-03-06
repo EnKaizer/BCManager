@@ -10,7 +10,7 @@ class Input extends Component {
                 <input onChange={this.props.onChange} type={this.props.type} required={this.props.required}/>
                 <span class="highlight"></span>
                 <span class="bar"></span>
-                <label>{this.props.label}</label>
+                <label className="inputLabel">{this.props.label}</label>
             </div>
         )
     }

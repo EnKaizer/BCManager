@@ -57,13 +57,13 @@ class Column extends Component {
         // These props are injected by React DnD,
         // as defined by your `collect` function above:
         const { isOver, canDrop, connectDropTarget } = this.props;
-
+        console.log('tasks', this.props.tasks);
         return connectDropTarget(
             <div className="column">
-                <span>To Do </span>
+                <span>{this.props.name} </span>
                 <div>
                     {this.props.tasks.map(task => {
-                        return <PostIt oldColId={this.props.id} id={task.id} text="UIDSAJISDBSDAJBDSAJDBSJDSJIBASDISBDIJDSA"/>
+                        return <PostIt oldId={this.props.id} {...task}/>
                     })}
                 </div>
             </div>

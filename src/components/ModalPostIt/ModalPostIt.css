@@ -1,0 +1,9 @@
+.modaldialogPostIt{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}

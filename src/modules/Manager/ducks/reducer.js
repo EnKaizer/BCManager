@@ -4,7 +4,7 @@
 import {Types} from './index';
 import _ from 'underscore';
 const INITIAL_STATE = {
-  columnList: [{
+    projectList: [{
       id: 1,
       tasks: [{
           id:1,
@@ -24,28 +24,28 @@ const INITIAL_STATE = {
               id:3,
               text: 1
           }]
-      }]
+      }],
+    projectSelected: {}
 };
 
 export const reducer = (state = INITIAL_STATE, action) => {
-    console.log({INITIAL_STATE});
-    console.log({action});
     switch (action.type){
         case Types.CHANGE_COLUMN:
-            let columns = [...state.columnList];
+            let columns = [...state.projectSelected.boards];
             columns.map(col => {
+                console.log(col.tasks, action.payload.task.id);
                 col.tasks = _.reject(col.tasks, task => {
                     return task.id == action.payload.task.id
                 });
                 if(col.id == action.payload.newId){
                     col.tasks.push(action.payload.task)
                 }
-                console.log(col.tasks.includes(action.payload.task))
-                if(col.tasks.includes(action.payload.task)){
-                    console.log('oi');
-                }
             });
-            return {...state, columnList: columns};
+            return {...state, projectSelected: {...state.projectSelected, boards: [...columns]}};
+        case Types.GET_DATA:
+            return {...state, projectList: action.payload, projectSelected: action.payload[0]};
+        case Types.SELECTED_PROJECT:
+            return {...state, projectSelected: action.payload};
         default:
             return state;
     }
