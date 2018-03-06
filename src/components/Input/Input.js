@@ -7,10 +7,13 @@ class Input extends Component {
     render() {
         return (
             <div class="group">
-                <input onChange={this.props.onChange} type={this.props.type} required={this.props.required}/>
+                <input style={this.props.inputStyle} onChange={this.props.onChange}
+                       value={this.props.value}
+                       name={this.props.name}
+                       type={this.props.type} required={this.props.required}/>
                 <span class="highlight"></span>
                 <span class="bar"></span>
-                <label className="inputLabel">{this.props.label}</label>
+                <label style={this.props.labelStyle} className="inputLabel">{this.props.label}</label>
             </div>
         )
     }

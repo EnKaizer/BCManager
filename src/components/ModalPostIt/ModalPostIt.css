@@ -6,4 +6,53 @@
     justify-content: center;
     flex-direction: column;
     display: flex;
+    transition: opacity .3s ease-out;
+}
+
+.modalContent{
+    display: table;
+    transition: all .3s ease-out;
+    height: 30%;
+    width: 60%;
+    align-self: center;
+    text-align: start;
+    border-radius: 3px;
+    transition: opacity .6s ease-out;
+}
+
+.headerModal{
+    margin-top: 22px;
+}
+
+.textAreaModal{
+    display: list-item;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-variant-ligatures: none;
+    list-style: none;
+    font-weight: 400;
+    outline: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: start;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.footerModal {
+    padding: 6px 0px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    width: 100%;
+}
+
+.footerModal span{
+    margin-left: 15px;
+}
+
+.labelModal{
+    font-weight: 600;
+    font-size: 22px;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }

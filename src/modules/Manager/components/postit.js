@@ -6,9 +6,12 @@ import "./postit.css";
 import {DragSource} from 'react-dnd';
 import Preview from './preview';
 import {Rating, ModalPostIt} from '../../../components';
+import {connect} from 'react-redux';
+import {Actions} from '../ducks';
 const cardSource = {
     beginDrag(props) {
-        return {...props
+        return {
+            ...props
         };
     },
     isDragging(props, monitor) {
@@ -17,6 +20,11 @@ const cardSource = {
         // you can implement something like this to keep its
         // appearance dragged:
         return monitor.getItem().id === props.id;
+    },
+
+    canDrag(props, monitor){
+        console.log(props);
+        return props.canDragBool;
     },
 
     endDrag(props, monitor, component) {
@@ -29,7 +37,6 @@ const cardSource = {
         // that handled the drop, if it returned an object from
         // its drop() method.
         const dropResult = monitor.getDropResult();
-        console.log(dropResult, item);
     }
 };
 
@@ -45,11 +52,14 @@ function collect(connect, monitor) {
 
 class PostIt extends Component {
 
+    state = {showModal: false};
 
     render() {
-        const {isDragging, connectDragSource, description, name,evaluation, color} = this.props;
+        const {isDragging, connectDragSource, description, name, evaluation, color} = this.props;
         return connectDragSource(
-            <div>
+            <div onClick={() => {
+                this.setState({showModal: true}, () => this.props.canDragFunc(false))
+            }}>
                 <div style={{opacity: isDragging ? 0.5 : 1, cursor: 'move', color}} className="postit">
                     <div className="containerTitle">
                         <label>Titulo</label>
@@ -65,9 +75,15 @@ class PostIt extends Component {
                     </div>
                 </div>
                 <Preview {...this.props}/>
+                {this.state.showModal &&
+                <ModalPostIt show={this.state.showModal}
+                             close={() => this.setState({showModal: false}, () => this.props.canDragFunc(false))} {...this.props}/>
+                }
             </div>, {dropEffect: 'move'}
         );
     }
 }
 
-export default DragSource('PostIt', cardSource, collect)(PostIt);
+const mapStateToProps = ({ManagerReducer}) => ({...ManagerReducer});
+
+export default connect(mapStateToProps, {...Actions})(DragSource('PostIt', cardSource, collect)(PostIt));

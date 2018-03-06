@@ -15,3 +15,8 @@ export const getData = () => async dispatch => {
 export const changeProject = payload => {
     return{type: Types.SELECTED_PROJECT, payload}
 };
+
+export const canDragFunc = payload => {
+    console.log('chegou', payload)
+    return{type: Types.CAN_DRAG, payload}
+};

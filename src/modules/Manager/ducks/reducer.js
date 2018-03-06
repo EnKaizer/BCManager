@@ -25,7 +25,8 @@ const INITIAL_STATE = {
               text: 1
           }]
       }],
-    projectSelected: {}
+    projectSelected: {},
+    canDragBool: true
 };
 
 export const reducer = (state = INITIAL_STATE, action) => {
@@ -46,6 +47,8 @@ export const reducer = (state = INITIAL_STATE, action) => {
             return {...state, projectList: action.payload, projectSelected: action.payload[0]};
         case Types.SELECTED_PROJECT:
             return {...state, projectSelected: action.payload};
+        case Types.CAN_DRAG:
+            return {...state, canDragBool: action.payload};
         default:
             return state;
     }

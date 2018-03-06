@@ -35,7 +35,7 @@ class Manager extends Component {
                 </select>
                 <div className="columnContainer">
                     {this.props.projectSelected.boards && this.props.projectSelected.boards.map(col => {
-                        return <Column id={col.id} onChange={this.props.changeColumn} name={col.name}
+                        return <Column id={col.id} onChange={this.props.changeColumn} name={col.name} canDragBool={this.props.canDragBool}
                                        tasks={col.tasks}/>
                     })}
                 </div>
