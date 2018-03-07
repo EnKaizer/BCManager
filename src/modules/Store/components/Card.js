@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Glyphicon } from 'react-bootstrap';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import faCartPlus from '@fortawesome/fontawesome-free-solid/faCartPlus';
 import '../cardStyle.css';
 
 class Card extends Component {
@@ -27,10 +29,16 @@ class Card extends Component {
           </div>
           <div className="card-profile_user-infos">
             <button className="buttonCard">
-              <Glyphicon
-                style={{ fontSize: fontSize || '36px', marginTop: '-4px' }}
-                glyph="start"
-              />
+              <span
+                style={{
+                  fontSize: '30px',
+                  alignItems: 'center',
+                  display: 'flex',
+                  justifyContent: 'center',
+                }}
+              >
+                <FontAwesomeIcon icon={faCartPlus} />
+              </span>
               <span>{points || 0}&nbsp;Pt</span>
             </button>
           </div>
