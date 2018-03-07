@@ -1,25 +1,15 @@
 import React, { Component } from 'react';
+import '../cardPromotionStyle.css';
 
 export default class CardPromotion extends Component {
   render() {
     const { img } = this.props;
     return (
-      <div
-        style={{
-          width: '100%',
-          height: '120px',
-          backgroundColor: '#fff',
-          borderRadius: '10px',
-          display: 'flex',
-          flexDirection: 'row',
-        }}
-      >
+      <div className="cardPromotion">
         <div
           style={{
-            overflow: 'hidden',
-            position: 'relative',
-            borderTopLeftRadius: '10px',
-            borderBottomLeftRadius: '10px',
+            height: '100%',
+            display: 'flex',
           }}
         >
           <img
@@ -27,10 +17,22 @@ export default class CardPromotion extends Component {
               maxWidth: '150px',
               height: '170px',
               overflow: 'hidden',
-              position: 'relative',
             }}
             src={img || 'http://tedium.imgix.net/2017/03/0322_purple.jpg'}
           />
+          <span>hahaha</span>
+        </div>
+        <div className="containerFooter">
+          <a
+            href="#"
+            style={{
+              display: 'flex',
+              marginLeft: '4%',
+              textDecoration: 'none',
+            }}
+          >
+            <span>Comprar</span>
+          </a>
         </div>
       </div>
     );

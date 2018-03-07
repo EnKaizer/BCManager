@@ -6,7 +6,6 @@ import { actionStore } from './actions/action';
 import Container from '../../components/Container/Container';
 import ContainerPromotion from './components/GridContainerPromotion';
 import CardPromotion from './components/CardPromotion';
-import './cardStyleVertical.css';
 
 class Store extends Component {
   componentWillMount = async () => {
