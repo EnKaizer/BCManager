@@ -7,7 +7,7 @@ export default class GridContainerPromotion extends Component {
         style={{
           marginTop: '15%',
           display: 'grid',
-          gridTemplateColumns: '40% 40%',
+          gridTemplateColumns: '35% 35%',
           gridColumnGap: '10px',
           justifyContent: 'center',
         }}

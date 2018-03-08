@@ -25,7 +25,7 @@
   width: 100%;
   padding: 10px;
   height: 120px;
-  background-color: #f8f8ff;
+  background-color: rgba(247, 247, 247, 0.85);
 }
 
 .containerFooterBody {
@@ -33,7 +33,6 @@
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
-  border-top: 1px solid #f0efed;
   padding-top: 8px;
 }
 
