@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import faCartPlus from '@fortawesome/fontawesome-free-solid/faCartPlus';
 
 export default class UnlockAchievement extends Component {
   render() {
@@ -8,7 +10,7 @@ export default class UnlockAchievement extends Component {
           display: 'flex',
           flexDirection: 'column',
           width: '300px',
-          height: '100px',
+          height: '120px',
           backgroundColor: '#EEE5DE',
           borderRadius: '10px',
           position: 'fixed',
@@ -29,7 +31,7 @@ export default class UnlockAchievement extends Component {
               display: 'flex',
               width: '28%',
               marginLeft: '2px',
-              marginTop: '2px',
+              marginTop: '10px',
               borderTopLeftRadius: '10px',
               borderBottomLeftRadius: '10px',
             }}
@@ -75,12 +77,25 @@ export default class UnlockAchievement extends Component {
           style={{
             width: '100%',
             display: 'flex',
-            marginLeft: '5px',
-            marginTop: '5px',
+            marginLeft: '2px',
+            marginTop: '18px',
             marginBottom: '5px',
           }}
         >
-          <button>button</button>
+          <button
+            style={{
+              color: '#fff',
+              border: 'none',
+              background: '#ee2c2c',
+              borderRadius: '10px',
+              height: '24px',
+              width: '60px',
+              outline: 'none',
+              fontSize: '14pt',
+            }}
+          >
+            <FontAwesomeIcon icon={faCartPlus} />
+          </button>
         </div>
       </div>
     );
