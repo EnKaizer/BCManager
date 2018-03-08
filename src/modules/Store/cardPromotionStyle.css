@@ -11,11 +11,30 @@
   backface-visibility: hidden;
 }
 
+.cardPromotionImg {
+  width: 100%;
+  height: 150%;
+  overflow: hidden;
+  display: flex;
+  align-self: center;
+  background-size: cover;
+  background-color: purple;
+}
+
 .containerFooter {
   width: 100%;
   padding: 10px;
   height: 120px;
-  background-color: #F8F8FF;
+  background-color: #f8f8ff;
+}
+
+.containerFooterBody {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  border-top: 1px solid #f0efed;
+  padding-top: 8px;
 }
 
 .cardPromotion .containerFooter {
@@ -43,10 +62,14 @@
 }
 
 .cardPromotion:hover .containerFooter {
-  -webkit-transform: translateY(-47%);
-  -moz-transform: translateY(-47%);
-  -ms-transform: translateY(-47%);
-  transform: translateY(-47%);
+  -webkit-transform: translateY(-90%);
+  -moz-transform: translateY(-90%);
+  -ms-transform: translateY(-90%);
+  transform: translateY(-90%);
+}
+
+.cardPromotion:hover .cardPromotionImg {
+  filter: blur(4px);
 }
 
 .cardPromotion :before {
@@ -55,24 +78,24 @@
 }
 
 .buttonFooterCard {
-  background: #5CACEE;
+  background: #ee2c2c;
   color: #fff;
   display: flex;
   flex-direction: row;
-  width: 104px;
+  width: 85px;
   justify-content: center;
-  height: 40px;
-    margin-left: 10px;
-    outline: none;
-    border-radius: 15px;
-    border: none;
-    font-size: 20pt;
-    cursor: pointer;
-    transition: all 0.5s;
-    animation-duration: 0.5s;
-    animation-name: bounce;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  height: 33px;
+  margin-left: 10px;
+  outline: none;
+  border-radius: 15px;
+  border: none;
+  font-size: 20pt;
+  cursor: pointer;
+  transition: all 0.5s;
+  animation-duration: 0.5s;
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 @keyframes bounce {

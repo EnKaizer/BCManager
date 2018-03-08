@@ -17,8 +17,18 @@ class Store extends Component {
     return (
       <Container link="Home" to="/">
         <ContainerPromotion>
-          <CardPromotion img="http://tedium.imgix.net/2017/03/0322_purple.jpg" />
-          <CardPromotion img="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX//wCKxvRFAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC" />
+          <CardPromotion
+            points="5.000 Pt"
+            subtitle="Escolha até 5 ingredientes e faça uma bela torta"
+            title="Monte sua torta"
+            img="http://www.hypebot.com/.a/6a00d83451b36c69e201bb090a7847970d-600wi"
+          />
+          <CardPromotion
+            points="2.000 Pt"
+            subtitle="Faça você mesmo o seu chaveiro"
+            title="Chaveiro Personalizado"
+            img="http://www.hypebot.com/.a/6a00d83451b36c69e201bb090a7847970d-600wi"
+          />
         </ContainerPromotion>
         <GridContainer columns={['18%', '18%', '18%', '18%']}>
           {listStore &&

@@ -5,7 +5,7 @@ import '../cardPromotionStyle.css';
 
 export default class CardPromotion extends Component {
   render() {
-    const { img } = this.props;
+    const { img, title, subtitle, points } = this.props;
     return (
       <div className="cardPromotion">
         <div
@@ -15,20 +15,24 @@ export default class CardPromotion extends Component {
           }}
         >
           <img
-            style={{
-              maxWidth: '150px',
-              height: '170px',
-              overflow: 'hidden',
-            }}
+            className="cardPromotionImg"
             src={img || 'http://tedium.imgix.net/2017/03/0322_purple.jpg'}
           />
-          <span>hahaha</span>
         </div>
         <div className="containerFooter">
-        <button className="buttonFooterCard">
-              <span><FontAwesomeIcon icon={faCartPlus} /></span>
+          <strong>{title}</strong>
+          <p style={{ margin: '-10px 0 0px' }} />
+          <span style={{ fontSize: '10pt' }}>{subtitle}</span>
+          <div className="containerFooterBody">
+            <button className="buttonFooterCard">
+              <span>
+                <FontAwesomeIcon icon={faCartPlus} />
+              </span>
             </button>
-        <span>Descrição do Produto</span>
+            <strong style={{ float: 'right', color: '#ee2c2c' }}>
+              {points}
+            </strong>
+          </div>
         </div>
       </div>
     );
