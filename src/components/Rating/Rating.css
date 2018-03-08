@@ -1,51 +1,85 @@
 .containerRanting {
-    display: flex;
+  display: flex;
 }
 
 .rating {
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    height: 100%;
-    width: 100%;
-
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  height: 100%;
+  width: 100%;
 }
-
-.starContainer{
-    height: 24px;
-    width: 24px;
-    position: relative;
-    z-index: 2;
+.starContainer {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  z-index: 2;
 }
-
-.starContainer::after{
-    content:'';
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .8s;
+.starContainer::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.8s;
 }
-
 .bgStar::after {
-    background-color: #fff;
-
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  background-color: #fff;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
 }
-
-
-.starContainer:active::after{
+.starContainer:hover::after {
+  animation-duration: 0.8s;
+  animation-name: animatethisporra;
+  animation-iteration-count: infinite;
+}
+@keyframes animatethisporra {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
     transform: scale(4);
     opacity: 0;
+  }
 }
-
 .inactive {
-    z-index: 3;
-    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_TQcaPQgRpszvwsoaPbOt4_I7yGRDSP8YoibunBp-fbaGcaud');
+  z-index: 3;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_TQcaPQgRpszvwsoaPbOt4_I7yGRDSP8YoibunBp-fbaGcaud');
 }
-
-.active{
-    z-index: 3;
-    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('https://thumbs.dreamstime.com/b/painting-close-up-vivid-turquoise-light-green-color-paint-brush-strokes-texture-interesting-creative-imaginative-86714948.jpg');
+.active {
+  z-index: 3;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0)
+    ),
+    url('https://thumbs.dreamstime.com/b/painting-close-up-vivid-turquoise-light-green-color-paint-brush-strokes-texture-interesting-creative-imaginative-86714948.jpg');
 }

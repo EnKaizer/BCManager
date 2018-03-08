@@ -1,0 +1,85 @@
+.cardPromotion {
+  width: 100%;
+  height: 120px;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.containerFooter {
+  width: 100%;
+  padding: 10px;
+  height: 120px;
+  background-color: #F8F8FF;
+}
+
+.cardPromotion .containerFooter {
+  color: #000;
+  width: 100%;
+  height: 100%;
+  font-size: 16pt;
+  -webkit-transition: all 0.3s;
+  -webkit-backface-visibility: hidden;
+  -moz-transition: all 0.3s;
+  -moz-backface-visibility: hidden;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+}
+
+.cardPromotion:before {
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.cardPromotion:active:before {
+  color: #5cacee;
+}
+
+.cardPromotion:hover .containerFooter {
+  -webkit-transform: translateY(-47%);
+  -moz-transform: translateY(-47%);
+  -ms-transform: translateY(-47%);
+  transform: translateY(-47%);
+}
+
+.cardPromotion :before {
+  left: -100%;
+  top: 0;
+}
+
+.buttonFooterCard {
+  background: #5CACEE;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  width: 104px;
+  justify-content: center;
+  height: 40px;
+    margin-left: 10px;
+    outline: none;
+    border-radius: 15px;
+    border: none;
+    font-size: 20pt;
+    cursor: pointer;
+    transition: all 0.5s;
+    animation-duration: 0.5s;
+    animation-name: bounce;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
