@@ -13,10 +13,9 @@
 
 .containerFooter {
   width: 100%;
+  padding: 10px;
   height: 120px;
-  background-color: #000;
-  opacity: 0.5;
-  cursor: pointer;
+  background-color: #F8F8FF;
 }
 
 .cardPromotion .containerFooter {
@@ -44,13 +43,43 @@
 }
 
 .cardPromotion:hover .containerFooter {
-  -webkit-transform: translateY(-35%);
-  -moz-transform: translateY(-35%);
-  -ms-transform: translateY(-35%);
-  transform: translateY(-35%);
+  -webkit-transform: translateY(-47%);
+  -moz-transform: translateY(-47%);
+  -ms-transform: translateY(-47%);
+  transform: translateY(-47%);
 }
 
 .cardPromotion :before {
   left: -100%;
   top: 0;
+}
+
+.buttonFooterCard {
+  background: #5CACEE;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  width: 104px;
+  justify-content: center;
+  height: 40px;
+    margin-left: 10px;
+    outline: none;
+    border-radius: 15px;
+    border: none;
+    font-size: 20pt;
+    cursor: pointer;
+    transition: all 0.5s;
+    animation-duration: 0.5s;
+    animation-name: bounce;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }

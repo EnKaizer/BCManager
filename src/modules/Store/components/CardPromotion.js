@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import faCartPlus from '@fortawesome/fontawesome-free-solid/faCartPlus';
 import '../cardPromotionStyle.css';
 
 export default class CardPromotion extends Component {
@@ -23,16 +25,10 @@ export default class CardPromotion extends Component {
           <span>hahaha</span>
         </div>
         <div className="containerFooter">
-          <a
-            href="#"
-            style={{
-              display: 'flex',
-              marginLeft: '4%',
-              textDecoration: 'none',
-            }}
-          >
-            <span>Comprar</span>
-          </a>
+        <button className="buttonFooterCard">
+              <span><FontAwesomeIcon icon={faCartPlus} /></span>
+            </button>
+        <span>Descrição do Produto</span>
         </div>
       </div>
     );

@@ -20,6 +20,7 @@ class GridContainer extends Component {
         return(
             <div style={{gridTemplateColumns: cols, gridRowGap: gridRowGap || '390px', gridColumnGap: gridColumnGap || '10px'}} className="containerCard">
                 {this.props.children}
+                
             </div>  
         )
     }
