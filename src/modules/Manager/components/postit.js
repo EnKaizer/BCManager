@@ -23,7 +23,6 @@ const cardSource = {
     },
 
     canDrag(props, monitor){
-        console.log(props);
         return props.canDragBool;
     },
 
@@ -57,10 +56,10 @@ class PostIt extends Component {
     render() {
         const {isDragging, connectDragSource, description, name, evaluation, color} = this.props;
         return connectDragSource(
-            <div onClick={() => {
-                this.setState({showModal: true}, () => this.props.canDragFunc(false))
-            }}>
-                <div style={{opacity: isDragging ? 0.5 : 1, cursor: 'move', color}} className="postit">
+            <div>
+                <div onClick={() => {
+                    this.setState({showModal: true}, () => this.props.canDragFunc(false))
+                }} style={{opacity: isDragging ? 0.5 : 1, cursor: 'move', color}} className="postit">
                     <div className="containerTitle">
                         <label>Titulo</label>
                         <span className="titlePostit">{name}</span>

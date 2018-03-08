@@ -8,7 +8,9 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faPaintBrush from '@fortawesome/fontawesome-free-solid/faPaintBrush'
 import faUserPlus from '@fortawesome/fontawesome-free-solid/faUserPlus'
 import faClipboardCheck from '@fortawesome/fontawesome-free-solid/faClipboardCheck'
-import ReactDOM from 'react-dom';
+import faWindowClose from '@fortawesome/fontawesome-free-solid/faWindowClose'
+import EditorModal from './EditorModal';
+import ColorSelector from "./ColorSelector";
 
 class ModalPostIt extends Component {
     state = {name: ''};
@@ -18,33 +20,18 @@ class ModalPostIt extends Component {
     };
 
     handleChange = e => {
-        console.log(e.target.name, e.target.value, 'bateu');
+        console.log(e);
         this.setState({[e.target.name]: e.target.value})
-    };
-
-    emitChange = (e) => {
-        var html = ReactDOM.findDOMNode(this.description).innerHTML;
-        console.log(html)
-        if (this.handleChange) {
-
-            this.handleChange({
-                target: {
-                    value: html,
-                    name: 'description'
-                }
-            });
-        }
     };
 
     render() {
         return (
-            <div style={{position: 'absolute', top: 0, left: 0}}>
-                <div onClick={this.props.close}
+            <div onKeyDown={(e)=> e.keyCode == 27 ? this.props.close() : ''} style={{position: 'absolute', top: 0, left: 0}}>
+                <div
                      style={{zIndex: 3, display: this.props.show ? 'flex' : 'none', opacity: this.props.show ? 1 : 0}}
                      className="modaldialogPostIt">
-
                     <div style={{
-                        background: this.props.color || 'white',
+                        background: this.state.color ? this.state.color : this.props.color || 'white',
                         opacity: this.props.show ? 1 : 0,
                         zIndex: 4000
                     }}
@@ -56,15 +43,42 @@ class ModalPostIt extends Component {
                                    name="name"
                                    value={this.state.name}
                                    label="Titulo"/>
+                            <span onClick={this.props.close}>
+                                <FontAwesomeIcon icon={faWindowClose}/>
+                            </span>
                         </div>
-                        <label className="labelModal">Nota: </label>
-                        <div contenteditable="true" tabindex="0" ref={element => this.description = element} aria-multiline="true" onInput={this.emitChange}
-                             onChange={this.handleChange} value={this.state.description} name="description" role="textbox" aria-label="Nota"
-                             className="textAreaModal" spellcheck="true">{this.state.description}
+                        <div className="containerBodyModal">
+                            <div className="costPostIt">
+                                <Input inputStyle={{fontWeight: 600, padding: '10px 10px 0px 5px', color: 'green'}}
+                                       labelStyle={{fontSize: 12, fontWeight: 600}}
+                                       onChange={this.handleChange}
+                                       maxLength="4"
+                                       name="cost"
+                                       value={this.state.cost}
+                                       label="Pontos"/>
+                            </div>
+                            <div className="editorModalNote">
+                                <label className="labelModal">Nota: </label>
+
+                                <div >
+                                    <EditorModal name="description" onChange={this.handleChange}
+                                                 value={this.props.description}/>
+                                </div>
+                            </div>
                         </div>
                         <div className="footerModal">
-                        <span>
+                        <span onClick={() => this.setState({colorSelector: true})}>
                             <FontAwesomeIcon icon={faPaintBrush}/>
+                            {this.state.colorSelector &&
+                            <div style={{
+                                backgroundColor: '#f7f7f7',
+                                borderBottomStyle: 'solid',
+                                borderTopStyle: 'solid',
+                                borderWidth: 0.6
+                            }}>
+                                <ColorSelector onChange={(color) => this.setState({color})}/>
+                            </div>
+                            }
                         </span>
                             <span>
                             <FontAwesomeIcon icon={faUserPlus}/>
@@ -74,7 +88,6 @@ class ModalPostIt extends Component {
                         </span>
                         </div>
                     </div>
-
                 </div>
             </div>
         )

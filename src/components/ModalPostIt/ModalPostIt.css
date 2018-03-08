@@ -21,7 +21,16 @@
 }
 
 .headerModal{
-    margin-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    margin: 22px 12px 0px;
+}
+
+.headerModal span{
+    cursor: pointer;
+    margin-bottom: 18px;
+    margin-left: 5px;
+    margin-top: -12px;
 }
 
 .textAreaModal{
@@ -48,6 +57,11 @@
 
 .footerModal span{
     margin-left: 15px;
+    cursor: pointer;
+}
+
+.footerModal span:hover{
+    background-color: rgba(110, 171, 255, 0.58);
 }
 
 .labelModal{
@@ -55,4 +69,25 @@
     font-size: 22px;
     margin-left: 10px;
     margin-bottom: 10px;
+}
+
+.costPostIt{
+    position: inherit;
+    margin-top: 30px;
+    padding: 0;
+    width: 100%;
+    grid-column: 4 / 4;
+    grid-row: 1;
+}
+
+.editorModalNote{
+    margin-left: 15px;
+    grid-row: 1;
+    grid-column: 1 / 4;
+}
+
+.containerBodyModal{
+    display: grid;
+    grid-template-columns: 25% 26% 27% 14%;
+    grid-gap: 10px;
 }
