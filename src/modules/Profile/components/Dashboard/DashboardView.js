@@ -8,26 +8,43 @@ const style = {
     display: 'flex',
   },
   tasks: {
-    flex: 1,
+    padding: 15,
   },
   progress: {
-    flex: 1,
-    padding: 30,
+    display: 'flex',
+    margin: 15,
+    padding: 10,
     backgroundColor: 'white',
+    flexDirection: 'column',
   },
 };
 
 const DashboardView = props => {
   const { projects } = props;
   return (
-    <section style={style.root}>
-      <div style={style.tasks}>
-        <Tasks {...props} />
+    <section>
+      <div style={style.root}>
+        <div style={style.tasks}>
+          <Tasks {...props} />
+        </div>
+        <div style={style.tasks}>
+          <Tasks {...props} />
+        </div>
+        <div style={style.tasks}>
+          <Tasks {...props} />
+        </div>
       </div>
-      <div style={style.progress}>
-        {projects.map(p => (
-          <ProjectStatus projects={p.projects} month={p.month} />
-        ))}
+      <div style={{ display: 'flex' }}>
+        <div style={style.progress}>
+          {projects.map(p => (
+            <ProjectStatus projects={p.projects} month={p.month} />
+          ))}
+        </div>
+        <div style={style.progress}>
+          {projects.map(p => (
+            <ProjectStatus projects={p.projects} month={p.month} />
+          ))}
+        </div>
       </div>
     </section>
   );
