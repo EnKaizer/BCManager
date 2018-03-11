@@ -1,8 +1,13 @@
 import React from 'react';
-import { Dashboard } from '../';
+import { Dashboard, InfoUser } from '../';
 
 const ProfileView = props => {
-  return <Dashboard />;
+  return (
+    <section>
+      <InfoUser />
+      <Dashboard />
+    </section>
+  );
 };
 
 ProfileView.propTypes = {};
