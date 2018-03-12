@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faCartPlus from '@fortawesome/fontawesome-free-solid/faCartPlus';
 import $ from 'jquery';
@@ -30,28 +31,26 @@ export default class UnlockAchievement extends Component {
   };
 
   render() {
+    const { img, title, description, points } = this.props;
     return (
       <dialog onClick={() => this.closeDialog()} id="achieviment">
         <div className="containerAlertAchievement">
           <div className="containerBodyTop">
             <div className="containerImg">
-              <img
-                className="img"
-                src="https://theliteracyexperiments.files.wordpress.com/2015/08/icon-leaderboard.png"
-              />
+              <img className="img" src={img} />
             </div>
             <div className="containerDescription">
-              <strong>Conquista Desbloqueada</strong>
-              <span className="textDescriptionSpan">
-                Parabéns pela primeira compra em nossa loja.
-              </span>
-              <span className="textPointsSpan">1.500 Pt</span>
+              <strong>{title}</strong>
+              <span className="textDescriptionSpan">{description}</span>
+              <span className="textPointsSpan">{points}</span>
             </div>
           </div>
           <div className="containerBodyBottom">
-            <button className="button">
-              <FontAwesomeIcon icon={faCartPlus} />
-            </button>
+            <Link style={{ outline: 'none', width: '22%' }} to="/store">
+              <button className="button">
+                <FontAwesomeIcon icon={faCartPlus} />
+              </button>
+            </Link>
           </div>
         </div>
       </dialog>

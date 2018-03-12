@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faCartPlus from '@fortawesome/fontawesome-free-solid/faCartPlus';
+import { Link } from 'react-router-dom';
 
 export default class UnlockAchievement extends Component {
   render() {
@@ -86,20 +87,9 @@ export default class UnlockAchievement extends Component {
               marginBottom: '5px',
             }}
           >
-            <button
-              style={{
-                color: '#fff',
-                border: 'none',
-                background: '#ee2c2c',
-                borderRadius: '10px',
-                height: '24px',
-                width: '60px',
-                outline: 'none',
-                fontSize: '14pt',
-              }}
-            >
+            <Link to="/store">
               <FontAwesomeIcon icon={faCartPlus} />
-            </button>
+            </Link>
           </div>
         </dialog>
       </div>

@@ -5,7 +5,7 @@ export default class GridContainerPromotion extends Component {
     return (
       <div
         style={{
-          marginTop: '15%',
+          marginTop: '5vh',
           display: 'grid',
           gridTemplateColumns: '35% 35%',
           gridColumnGap: '10px',
