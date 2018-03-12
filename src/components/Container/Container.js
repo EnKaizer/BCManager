@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import logo from '../../logo.svg';
 import '../../App.css';
 import $ from 'jquery';
@@ -6,12 +6,12 @@ import ReactDOM from 'react-dom';
 import PostIt from '../../modules/Manager/components/postit';
 import HTML5Backend from 'react-dnd-html5-backend';
 import MouseBackEnd from 'react-dnd-mouse-backend';
-import {DragDropContext} from 'react-dnd';
-import {Link} from 'react-router-dom';
-import {Profile} from '../../../src/modules/Profile/components';
+import { DragDropContext } from 'react-dnd';
+import { Link } from 'react-router-dom';
+import { Profile } from '../../../src/modules/Profile/components';
 
 class Container extends Component {
-    state = {headerZ: 0, minHeader: false};
+    state = { headerZ: 0, minHeader: false };
     componentDidMount = () => {
         const elem = ReactDOM.findDOMNode(this.elementToScroll);
         if (window.addEventListener) {
@@ -54,7 +54,7 @@ class Container extends Component {
 
     headerLoad = () => {
         if (window.scrollY >= 610) {
-            this.setState({minHeader: true}, () => {
+            this.setState({ minHeader: true }, () => {
                 $('#header').css({
                     'z-index': 2,
                     'line-height': '50px',
@@ -68,7 +68,7 @@ class Container extends Component {
 
         // Definindo o tamanho dos elementos header e conteúdo
         if (window.scrollY < 610) {
-            this.setState({minHeader: false}, () => {
+            this.setState({ minHeader: false }, () => {
                 $('header').css({
                     'z-index': 0,
                     height: windowHeight + 'px',
@@ -85,29 +85,28 @@ class Container extends Component {
     render() {
         return (
             <div
-                onScroll={() => console.log('oi')}
                 ref={element => (this.elementToScroll1 = element)}
                 className="App"
             >
                 <div
-                    onScroll={() => console.log('oi')}
+
                     ref={element => (this.elementToScroll2 = element)}
                     id="scroll-animate"
                 >
                     <div
-                        onScroll={() => console.log('oi')}
+
                         ref={element => (this.elementToScroll3 = element)}
                         id="scroll-animate-main"
                     >
                         <div className="wrapper-parallax">
-                            <header style={{zIndex: 0}} id="header">
+                            <header style={{ zIndex: 0 }} id="header">
                                 {this.state.minHeader ? (
-                                    <div style={{paddingBottom: 10, color: 'white'}}>
+                                    <div style={{ paddingBottom: 10, color: 'white' }}>
                                         <Link to={this.props.to}>{this.props.link}</Link>
                                     </div>
                                 ) : (
-                                    <Profile />
-                                )}
+                                        <Profile />
+                                    )}
                             </header>
                             <div className="content">
                                 {this.props.spacer ? (
@@ -115,8 +114,8 @@ class Container extends Component {
                                         {this.props.children}
                                     </div>
                                 ) : (
-                                    <div>{this.props.children}</div>
-                                )}
+                                        <div>{this.props.children}</div>
+                                    )}
                             </div>
                         </div>
                     </div>

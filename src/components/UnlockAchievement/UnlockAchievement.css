@@ -1,0 +1,88 @@
+dialog#achieviment {
+  border: none;
+  background: transparent;
+}
+
+.containerAlertAchievement {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 120px;
+  background-color: #eee5de;
+  border-radius: 10px;
+  position: fixed;
+  top: 110px;
+  z-index: 2;
+  padding: 2px;
+  right: 2px;
+  transition: all 0.4s;
+  animation-duration: 0.4s;
+  animation-name: slide;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+
+.containerBodyTop {
+  width: 100%;
+  display: flex;
+}
+
+.containerBodyBottom {
+  width: 100%;
+  display: flex;
+}
+
+.button {
+  color: #fff;
+  border: none;
+  background: #ee2c2c;
+  border-radius: 10px;
+  height: 24px;
+  width: 60px;
+  outline: none;
+  font-size: 14pt;
+}
+
+.containerImg {
+  display: flex;
+  width: 28%;
+  margin-left: 4px;
+  margin-top: 4px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.containerDescription {
+  display: flex;
+  flex-direction: column;
+}
+.containerDescription strong {
+  width: 100%;
+  font-size: 11pt;
+}
+
+.textDescriptionSpan {
+  font-size: 9pt;
+  color: #5f5e5e;
+}
+
+.textPointsSpan {
+  font-size: 14pt;
+  font-weight: bold;
+  color: green;
+}
+
+.img {
+  max-width: 60px;
+  height: auto;
+  align-self: baseline;
+}
+
+@keyframes slide {
+  0% {
+    right: -310px;
+  }
+  100% {
+    right: 2px;
+  }
+}

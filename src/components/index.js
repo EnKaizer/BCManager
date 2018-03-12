@@ -5,4 +5,5 @@ import Rating from './Rating/Rating';
 import Container from './Container/Container';
 import Input from './Input/Input'
 import ModalPostIt from './ModalPostIt/ModalPostIt';
-export { Rating, Container, Input, ModalPostIt };
+import UnlockAchievement from './UnlockAchievement/UnlockAchievement';
+export { Rating, Container, Input, ModalPostIt, UnlockAchievement };

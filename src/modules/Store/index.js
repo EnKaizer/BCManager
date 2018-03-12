@@ -6,7 +6,6 @@ import { actionStore } from './actions/action';
 import Container from '../../components/Container/Container';
 import ContainerPromotion from './components/GridContainerPromotion';
 import CardPromotion from './components/CardPromotion';
-import UnlockAchievement from './components/UnlockAchievement';
 
 class Store extends Component {
   componentWillMount = async () => {
@@ -17,7 +16,6 @@ class Store extends Component {
     const { listStore } = this.props.StoreReducer;
     return (
       <Container link="Home" to="/">
-        <UnlockAchievement />
         <ContainerPromotion>
           <CardPromotion
             points="5.000 Pt"
