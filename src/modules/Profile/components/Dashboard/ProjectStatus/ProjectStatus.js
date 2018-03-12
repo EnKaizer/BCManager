@@ -20,6 +20,7 @@ function ProjectStatus(props) {
       display: 'flex',
       flexDirection: 'column',
       marginBottom: 15,
+      width: '100%',
     },
     row: {
       display: 'flex',

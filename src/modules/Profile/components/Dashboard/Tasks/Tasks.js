@@ -8,8 +8,6 @@ const style = {
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: 'white',
-    border: '1px solid #ccc',
     height: '100%',
   },
 };

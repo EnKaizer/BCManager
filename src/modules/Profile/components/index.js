@@ -5,3 +5,4 @@ export { default as Tasks } from './Dashboard/Tasks/Tasks';
 export {
   default as ProjectStatus,
 } from './Dashboard/ProjectStatus/ProjectStatus';
+export { default as InfoUser } from './InfoUser/InfoUserController';
