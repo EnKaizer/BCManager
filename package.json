@@ -28,6 +28,7 @@
     "react-dnd-mouse-backend": "^0.1.1",
     "react-dom": "^16.2.0",
     "react-fontawesome": "^1.6.1",
+    "react-materialize": "^2.1.0",
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",

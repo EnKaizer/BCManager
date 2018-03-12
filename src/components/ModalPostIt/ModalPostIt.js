@@ -11,9 +11,10 @@ import faClipboardCheck from '@fortawesome/fontawesome-free-solid/faClipboardChe
 import faWindowClose from '@fortawesome/fontawesome-free-solid/faWindowClose'
 import EditorModal from './EditorModal';
 import ColorSelector from "./ColorSelector";
+import CheckList from '../CheckList/CheckList';
 
 class ModalPostIt extends Component {
-    state = {name: ''};
+    state = {name: '', colorSelector: false, checkList: false};
 
     componentWillMount = () => {
         this.setState({...this.props});
@@ -26,10 +27,11 @@ class ModalPostIt extends Component {
 
     render() {
         return (
-            <div onKeyDown={(e)=> e.keyCode == 27 ? this.props.close() : ''} style={{position: 'absolute', top: 0, left: 0}}>
+            <div onKeyDown={(e) => e.keyCode == 27 ? this.props.close() : ''}
+                 style={{position: 'absolute', top: 0, left: 0}}>
                 <div
-                     style={{zIndex: 3, display: this.props.show ? 'flex' : 'none', opacity: this.props.show ? 1 : 0}}
-                     className="modaldialogPostIt">
+                    style={{zIndex: 3, display: this.props.show ? 'flex' : 'none', opacity: this.props.show ? 1 : 0}}
+                    className="modaldialogPostIt">
                     <div style={{
                         background: this.state.color ? this.state.color : this.props.color || 'white',
                         opacity: this.props.show ? 1 : 0,
@@ -39,6 +41,7 @@ class ModalPostIt extends Component {
                         <div className="headerModal">
                             <Input inputStyle={{fontWeight: 600, padding: '10px 10px 0px 5px'}}
                                    labelStyle={{fontSize: 22, fontWeight: 600}}
+                                   styleLightBar={{marginTop: 0}}
                                    onChange={this.handleChange}
                                    name="name"
                                    value={this.state.name}
@@ -83,8 +86,18 @@ class ModalPostIt extends Component {
                             <span>
                             <FontAwesomeIcon icon={faUserPlus}/>
                         </span>
-                            <span>
+                            <span onClick={() => this.setState({checkList: true})}>
                             <FontAwesomeIcon icon={faClipboardCheck}/>
+                                {this.state.checkList &&
+                                <div style={{
+                                    backgroundColor: '#f7f7f7',
+                                    borderBottomStyle: 'solid',
+                                    borderTopStyle: 'solid',
+                                    borderWidth: 0.6
+                                }}>
+                                    <CheckList list={this.state.subtasks}/>
+                                </div>
+                                }
                         </span>
                         </div>
                     </div>

@@ -59,7 +59,7 @@ class PostIt extends Component {
             <div>
                 <div onClick={() => {
                     this.setState({showModal: true}, () => this.props.canDragFunc(false))
-                }} style={{opacity: isDragging ? 0.5 : 1, cursor: 'move', color}} className="postit">
+                }} style={{opacity: isDragging ? 0.5 : 1, cursor: 'move', background: this.props.color}} className="postit">
                     <div className="containerTitle">
                         <label>Titulo</label>
                         <span className="titlePostit">{name}</span>

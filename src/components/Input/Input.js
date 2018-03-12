@@ -13,7 +13,7 @@ class Input extends Component {
                        name={this.props.name}
                        type={this.props.type} required={this.props.required}/>
                 <span class="highlight"></span>
-                <span class="bar"></span>
+                <span style={this.props.styleLightBar} class="bar"></span>
                 <label style={this.props.labelStyle} className="inputLabel">{this.props.label}</label>
             </div>
         )
