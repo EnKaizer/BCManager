@@ -21,6 +21,7 @@ const style = {
     display: 'flex',
     justifyContent: 'space-between',
     flexDirection: 'column',
+    alignItems: 'left',
     height: 150,
   },
 };

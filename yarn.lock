@@ -6463,6 +6463,10 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-anchor-link-smooth-scroll@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-anchor-link-smooth-scroll/-/react-anchor-link-smooth-scroll-1.0.5.tgz#2c6d88660258d8d1203d5cd9723be88be7c77e77"
+
 react-bootstrap@^0.32.1:
   version "0.32.1"
   resolved "https://registry.yarnpkg.com/react-bootstrap/-/react-bootstrap-0.32.1.tgz#60624c1b48a39d773ef6cce6421a4f33ecc166bb"
@@ -6605,6 +6609,14 @@ react-inspector@^2.2.2:
   dependencies:
     babel-runtime "^6.26.0"
     is-dom "^1.0.9"
+
+react-materialize@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-materialize/-/react-materialize-2.1.0.tgz#fd508c94f2dbc8348b32fd7a75dd7fcde5550e52"
+  dependencies:
+    classnames "^2.2.5"
+    react "^16.2.0"
+    react-dom "^16.2.0"
 
 react-measure@^2.0.2:
   version "2.0.2"
