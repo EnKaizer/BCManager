@@ -6562,6 +6562,12 @@ react-error-overlay@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
 
+react-event-timeline@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/react-event-timeline/-/react-event-timeline-1.5.1.tgz#55d6b19138115178eadd47ae7352eedcc171bae9"
+  dependencies:
+    prop-types "^15.6.0"
+
 react-fontawesome@^1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/react-fontawesome/-/react-fontawesome-1.6.1.tgz#eddce17e7dc731aa09fd4a186688a61793a16c5c"

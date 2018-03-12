@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Tasks from './Tasks/Tasks';
 import ProjectStatus from './ProjectStatus/ProjectStatus';
+import Timeline from './Timeline/Timeline';
 
 const style = {
   root: {
@@ -41,9 +42,7 @@ const DashboardView = props => {
           ))}
         </div>
         <div style={style.progress}>
-          {projects.map(p => (
-            <ProjectStatus projects={p.projects} month={p.month} />
-          ))}
+          <Timeline />
         </div>
       </div>
     </section>
