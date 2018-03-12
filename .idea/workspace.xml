@@ -2,24 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bbf4b5a-68f2-4160-b077-189a7e4071ea" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/modules/Store/components/UnlockAchievement.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.css" afterPath="$PROJECT_DIR$/src/App.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/CheckList/CheckList.css" afterPath="$PROJECT_DIR$/src/components/CheckList/CheckList.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/CheckList/CheckList.js" afterPath="$PROJECT_DIR$/src/components/CheckList/CheckList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Container/Container.js" afterPath="$PROJECT_DIR$/src/components/Container/Container.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ModalPostIt/ModalPostIt.css" afterPath="$PROJECT_DIR$/src/components/ModalPostIt/ModalPostIt.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ModalPostIt/ModalPostIt.js" afterPath="$PROJECT_DIR$/src/components/ModalPostIt/ModalPostIt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ModalPostIt/ColorSelector.css" afterPath="$PROJECT_DIR$/src/components/ModalPostIt/ColorSelector.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/UnlockAchievement/UnlockAchievement.css" afterPath="$PROJECT_DIR$/src/components/UnlockAchievement/UnlockAchievement.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/UnlockAchievement/UnlockAchievement.js" afterPath="$PROJECT_DIR$/src/components/UnlockAchievement/UnlockAchievement.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/Manager/components/column.js" afterPath="$PROJECT_DIR$/src/modules/Manager/components/column.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/Manager/components/postit.js" afterPath="$PROJECT_DIR$/src/modules/Manager/components/postit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/Manager/components/preview.js" afterPath="$PROJECT_DIR$/src/modules/Manager/components/preview.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/Manager/ducks/actions.js" afterPath="$PROJECT_DIR$/src/modules/Manager/ducks/actions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/Manager/index.js" afterPath="$PROJECT_DIR$/src/modules/Manager/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/Profile/components/Dashboard/Tasks/Tasks.js" afterPath="$PROJECT_DIR$/src/modules/Profile/components/Dashboard/Tasks/Tasks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/Store/index.js" afterPath="$PROJECT_DIR$/src/modules/Store/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/index.js" afterPath="$PROJECT_DIR$/src/routes/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/Store/cardStyle.css" afterPath="$PROJECT_DIR$/src/modules/Store/cardStyle.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/Store/components/Card.js" afterPath="$PROJECT_DIR$/src/modules/Store/components/Card.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/Store/components/CardPromotion.js" afterPath="$PROJECT_DIR$/src/modules/Store/components/CardPromotion.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/Store/components/GridContainer.js" afterPath="$PROJECT_DIR$/src/modules/Store/components/GridContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/Store/components/GridContainerPromotion.js" afterPath="$PROJECT_DIR$/src/modules/Store/components/GridContainerPromotion.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+              <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
               <folding>
                 <marker date="1520044650686" expanded="false" signature="7:15" ph="..." />
               </folding>
@@ -43,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Container.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Container.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Container/Container.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="105" column="46" lean-forward="true" selection-start-line="105" selection-start-column="46" selection-end-line="105" selection-end-column="46" />
+            <state relative-caret-position="-450">
+              <caret line="105" column="46" lean-forward="false" selection-start-line="105" selection-start-column="46" selection-end-line="105" selection-end-column="46" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
               </folding>
@@ -55,14 +49,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UnlockAchievement.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UnlockAchievement.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/UnlockAchievement/UnlockAchievement.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="85" column="30" lean-forward="false" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
+            <state relative-caret-position="339">
+              <caret line="55" column="62" lean-forward="false" selection-start-line="55" selection-start-column="62" selection-end-line="55" selection-end-column="62" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnlockAchievement.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/UnlockAchievement/UnlockAchievement.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="12" lean-forward="false" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/modules/Manager/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="45" column="89" lean-forward="false" selection-start-line="45" selection-start-column="89" selection-end-line="45" selection-end-column="89" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -71,7 +85,7 @@
         <entry file="file://$PROJECT_DIR$/src/Route.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="3" column="25" lean-forward="true" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+              <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -103,30 +117,10 @@
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
-              <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+              <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="preview.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/modules/Manager/components/preview.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="54" column="32" lean-forward="false" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="53" column="11" lean-forward="false" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -153,7 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>scrollFooter</find>
       <find>router</find>
       <find>wors</find>
       <find>j</find>
@@ -169,7 +162,6 @@
       <find>tex</find>
       <find>text-</find>
       <find>text-al</find>
-      <find>text</find>
       <find>wid</find>
       <find>connec</find>
       <find>can</find>
@@ -183,6 +175,8 @@
       <find>M</find>
       <find>Mensal</find>
       <find>position</find>
+      <find>text</find>
+      <find>slide</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -216,13 +210,14 @@
         <option value="$PROJECT_DIR$/src/components/ModalPostIt/ModalPostIt.js" />
         <option value="$PROJECT_DIR$/src/components/ModalPostIt/ModalPostIt.css" />
         <option value="$PROJECT_DIR$/src/modules/Profile/components/Dashboard/Tasks/Tasks.js" />
-        <option value="$PROJECT_DIR$/src/modules/Manager/index.js" />
         <option value="$PROJECT_DIR$/src/modules/Manager/components/preview.js" />
         <option value="$PROJECT_DIR$/src/modules/Manager/components/postit.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/routes/index.js" />
         <option value="$PROJECT_DIR$/src/modules/Store/index.js" />
         <option value="$PROJECT_DIR$/src/components/Container/Container.js" />
+        <option value="$PROJECT_DIR$/src/modules/Manager/index.js" />
+        <option value="$PROJECT_DIR$/src/components/UnlockAchievement/UnlockAchievement.css" />
         <option value="$PROJECT_DIR$/src/components/UnlockAchievement/UnlockAchievement.js" />
       </list>
     </option>
@@ -681,12 +676,12 @@
       <updated>1519265818054</updated>
       <workItem from="1519265820737" duration="18888000" />
       <workItem from="1519776092225" duration="15750000" />
-      <workItem from="1520046587885" duration="61462000" />
+      <workItem from="1520046587885" duration="62398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96100000" />
+    <option name="totallyTimeSpent" value="97036000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -743,14 +738,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/Rating/Rating.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="21" lean-forward="false" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -848,7 +835,7 @@
         <state relative-caret-position="884">
           <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
-            <marker date="1520485150750" expanded="true" signature="7:15" ph="..." />
+            <marker date="1520867179325" expanded="true" signature="7:15" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1031,7 +1018,7 @@
         <state relative-caret-position="170">
           <caret line="32" column="11" lean-forward="false" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
           <folding>
-            <element signature="e#43#92#0" expanded="true" />
+            <element signature="e#43#92#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1040,14 +1027,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/Manager/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="35" column="69" lean-forward="false" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
           <folding />
         </state>
       </provider>
@@ -1065,7 +1044,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1091,7 +1070,7 @@
         <state relative-caret-position="1556">
           <caret line="112" column="58" lean-forward="true" selection-start-line="112" selection-start-column="58" selection-end-line="112" selection-end-column="58" />
           <folding>
-            <element signature="e#43#82#0" expanded="true" />
+            <element signature="e#43#82#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1123,7 +1102,7 @@
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
           <folding>
             <marker date="1520044650686" expanded="false" signature="7:15" ph="..." />
           </folding>
@@ -1133,7 +1112,7 @@
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+          <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -1143,7 +1122,7 @@
     <entry file="file://$PROJECT_DIR$/src/Route.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="3" column="25" lean-forward="true" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+          <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1166,22 +1145,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Container/Container.js">
+    <entry file="file://$PROJECT_DIR$/src/modules/Manager/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="105" column="46" lean-forward="true" selection-start-line="105" selection-start-column="46" selection-end-line="105" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="45" column="89" lean-forward="false" selection-start-line="45" selection-start-column="89" selection-end-line="45" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/UnlockAchievement/UnlockAchievement.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="12" lean-forward="false" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/UnlockAchievement/UnlockAchievement.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="85" column="30" lean-forward="false" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
+        <state relative-caret-position="339">
+          <caret line="55" column="62" lean-forward="false" selection-start-line="55" selection-start-column="62" selection-end-line="55" selection-end-column="62" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Container/Container.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-450">
+          <caret line="105" column="46" lean-forward="false" selection-start-line="105" selection-start-column="46" selection-end-line="105" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,121 +1,63 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faCartPlus from '@fortawesome/fontawesome-free-solid/faCartPlus';
+import $ from 'jquery';
 import './UnlockAchievement.css';
 
 export default class UnlockAchievement extends Component {
 
-  componentWillReceiveProps = (nxtProps) => {
+   componentDidMount = () => {
+       $('.containerAlertAchievement').removeClass('closeUnlock');
+   };
+
+  componentWillReceiveProps = nxtProps => {
     const favDialog = document.getElementById('achieviment');
-    if (nxtProps.Achievement && (this.props.Achievement != nxtProps.Achievement)) {
+    if (
+      nxtProps.Achievement &&
+      this.props.Achievement != nxtProps.Achievement
+    ) {
       favDialog.showModal();
-    } else if (!nxtProps.Achievement && (this.props.Achievement != nxtProps.Achievement)) {
+    } else if (
+      !nxtProps.Achievement &&
+      this.props.Achievement != nxtProps.Achievement
+    ) {
       favDialog.close();
       nxtProps.closeAchievement();
     }
-  }
+  };
+
+  closeDialog = () => {
+    const favDialog = document.getElementById('achieviment');
+    $('.containerAlertAchievement').addClass('closeUnlock');
+    setTimeout(() => {
+        $('.containerAlertAchievement').removeClass('closeUnlock');
+      favDialog.close();
+      this.props.closeAchievement();
+    }, 400);
+  };
 
   render() {
+    const { img, title, description, points } = this.props;
     return (
-      <dialog onClick={() => {
-        const favDialog = document.getElementById('achieviment');
-        favDialog.close();
-        this.props.closeAchievement();
-      }} id="achieviment">
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            width: '300px',
-            height: '120px',
-            backgroundColor: '#EEE5DE',
-            borderRadius: '10px',
-            position: 'fixed',
-            top: '110px',
-            right: '2px',
-            zIndex: 2,
-            padding: '2px',
-          }}
-        >
-          <div
-            style={{
-              width: '100%',
-              display: 'flex',
-            }}
-          >
-            <div
-              style={{
-                display: 'flex',
-                width: '28%',
-                marginLeft: '2px',
-                marginTop: '10px',
-                borderTopLeftRadius: '10px',
-                borderBottomLeftRadius: '10px',
-              }}
-            >
-              <img
-                style={{
-                  maxWidth: '60px',
-                  height: 'auto',
-                  alignSelf: 'baseline',
-                }}
-                src="https://theliteracyexperiments.files.wordpress.com/2015/08/icon-leaderboard.png"
-              />
+      <dialog onClick={() => this.closeDialog()} id="achieviment">
+        <div className="containerAlertAchievement">
+          <div className="containerBodyTop">
+            <div className="containerImg">
+              <img className="img" src={img} />
             </div>
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-              }}
-            >
-              <strong
-                style={{
-                  width: '100%',
-                  fontSize: '11pt',
-                }}
-              >
-                Conquista Desbloqueada
-            </strong>
-              <span style={{ fontSize: '9pt', color: '#5f5e5e' }}>
-                Parabéns por descobrir a ferramenta para troca de Projetos
-            </span>
-              <span
-                style={{
-                    bottom: 0,
-                  position: 'absolute',
-                  left: '50%',
-                  fontSize: '14pt',
-                  fontWeight: 'bold',
-                  color: 'green',
-                }}
-              >
-                1.500 Pt
-            </span>
+            <div className="containerDescription">
+              <strong>{title}</strong>
+              <span className="textDescriptionSpan">{description}</span>
+              <span className="textPointsSpan">{points}</span>
             </div>
           </div>
-          <div
-            style={{
-              width: '100%',
-              display: 'flex',
-              marginLeft: '2px',
-              marginTop: '18px',
-              marginBottom: '5px',
-            }}
-          >
-            <button
-              style={{
-                color: '#fff',
-                border: 'none',
-                background: '#ee2c2c',
-                borderRadius: '10px',
-                height: '24px',
-                width: '60px',
-                outline: 'none',
-                fontSize: '14pt',
-              }}
-            >
-              <FontAwesomeIcon icon={faCartPlus} />
-            </button>
+          <div className="containerBodyBottom">
+            <Link style={{ outline: 'none', width: '22%' }} to="/store">
+              <button className="button">
+                <FontAwesomeIcon icon={faCartPlus} />
+              </button>
+            </Link>
           </div>
         </div>
       </dialog>

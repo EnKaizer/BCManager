@@ -3,11 +3,18 @@ import { Glyphicon } from 'react-bootstrap';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faCartPlus from '@fortawesome/fontawesome-free-solid/faCartPlus';
 import '../cardStyle.css';
+import Alert from '../../../components';
 
 class Card extends Component {
   constructor(props) {
     super(props);
   }
+
+  verifyPoints = () => {
+    const { points } = this.props;
+    const pointValidate = parseInt(points.split('points')[0].replace('.', ''));
+  };
+
   render() {
     const {
       img,
@@ -28,7 +35,7 @@ class Card extends Component {
             <img src={img} alt={!img && 'logo'} />
           </div>
           <div className="card-profile_user-infos">
-            <button className="buttonCard">
+            <button className="buttonCard" onClick={() => this.verifyPoints()}>
               <span
                 style={{
                   fontSize: '30px',

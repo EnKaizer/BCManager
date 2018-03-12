@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component, Fragment } from 'react';
 import '../../index.css';
 import Column from './components/column';
 import { ModalPostIt, UnlockAchievement } from '../../components';
@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import { Actions } from './ducks';
 
 class Manager extends Component {
-
     state = { unlock: false, createModal: false }
 
     componentWillMount = async () => {
@@ -41,7 +40,14 @@ class Manager extends Component {
                 <button onClick={() => this.setState({createModal: true})}>
                     Criar Nova Task
                 </button>
-                <UnlockAchievement closeAchievement={() => this.setState({ unlock: false })} Achievement={this.state.unlock} />
+                <UnlockAchievement
+                    img="https://theliteracyexperiments.files.wordpress.com/2015/08/icon-leaderboard.png"
+                    title="Conquista Desbloqueada"
+                    description="Parabéns por descobrir a ferramente: 'Troca de Projetos'."
+                    points="1.500 Pt"
+                    closeAchievement={() => this.setState({ unlock: false })}
+                    Achievement={this.state.unlock}
+                />
                 <div className="columnContainer">
                     {this.props.projectSelected.boards && this.props.projectSelected.boards.map(col => {
                         return <Column projectId={this.props.projectSelected.id} id={col.id} onChange={this.props.changeColumn} board={this.props.projectSelected.boards} name={col.name} canDragBool={this.props.canDragBool}
@@ -53,7 +59,6 @@ class Manager extends Component {
     }
 }
 
-
 const mapStateToProps = ({ ManagerReducer }) => ({ ...ManagerReducer });
 
-export default connect(mapStateToProps, { ...Actions })(Manager)
+export default connect(mapStateToProps, { ...Actions })(Manager);

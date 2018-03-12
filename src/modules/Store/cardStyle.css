@@ -227,7 +227,7 @@ body {
 .product {
   display: flex;
   justify-content: center;
-  margin-top: 15%;
+  margin-top: 10%;
   font-size: 20pt;
   font-weight: bolder;
 }
