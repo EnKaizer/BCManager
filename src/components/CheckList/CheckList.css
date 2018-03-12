@@ -32,6 +32,12 @@
     -webkit-transition: 0.2s ease all;
 }
 
+.bar{
+    margin-top: -7px;
+    position: absolute;
+    width: 56%;
+}
+
 .bar:before {
     left: 50%;
 }

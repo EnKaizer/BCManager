@@ -5,7 +5,7 @@ import Store from '../modules/Store';
 import { Profile } from '../modules/Profile/components';
 
 export default () => (
-  <BrowserRouter>
+  <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
     <Switch>
       <Route path="/" exact render={props => <App {...props} />} />
       <Route path="/store" exact render={props => <Store {...props} />} />

@@ -57,7 +57,7 @@ class PostIt extends Component {
         const {isDragging, connectDragSource, description, name, evaluation, color} = this.props;
         return connectDragSource(
             <div>
-                <div onClick={() => {
+                <div onDoubleClick={() => {
                     this.setState({showModal: true}, () => this.props.canDragFunc(false))
                 }} style={{opacity: isDragging ? 0.5 : 1, cursor: 'move', background: this.props.color}} className="postit">
                     <div className="containerTitle">
@@ -76,7 +76,11 @@ class PostIt extends Component {
                 <Preview {...this.props}/>
                 {this.state.showModal &&
                 <ModalPostIt show={this.state.showModal}
-                             close={() => this.setState({showModal: false}, () => this.props.canDragFunc(false))} {...this.props}/>
+                             boards={this.props.boards}
+                             boardId={this.props.boardId}
+                             projectId={this.props.projectId}
+                             saveTask={this.props.id ? this.props.saveTask : console.log('criar')}
+                             close={() => this.setState({showModal: false}, () => this.props.canDragFunc(true))} {...this.props}/>
                 }
             </div>, {dropEffect: 'move'}
         );

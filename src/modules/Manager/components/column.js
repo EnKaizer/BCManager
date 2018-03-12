@@ -62,7 +62,7 @@ class Column extends Component {
                 <span>{this.props.name} </span>
                 <div>
                     {this.props.tasks.map(task => {
-                        return <PostIt canDragBool={this.props.canDragBool} oldId={this.props.id} {...task}/>
+                        return <PostIt projectId={this.props.projectId} boardId={this.props.id} boards={this.props.board} canDragBool={this.props.canDragBool} oldId={this.props.id} {...task}/>
                     })}
                 </div>
             </div>

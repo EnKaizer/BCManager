@@ -99,6 +99,22 @@ class ModalPostIt extends Component {
                                 </div>
                                 }
                         </span>
+                            {this.props.boards &&
+                            <div className="boardSelect">
+                                <label>Coluna: </label>
+                                <select onChange={(e) => this.setState({boardId: e.target.value})}
+                                        value={this.state.boardId}
+                                        className="form-control">
+                                    {this.props.boards.map(prj =>
+                                        <option value={prj.id}>{prj.name}</option>)}
+                                </select>
+                            </div>
+                            }
+                            <button onClick={async () => {
+                                const {projectId} = this.props;
+
+                                await this.props.updateTask({projectId, taskId: this.state.id}, this.state)
+                            }}>Salvar</button>
                         </div>
                     </div>
                 </div>

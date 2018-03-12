@@ -6,9 +6,11 @@ import Input from '../Input/Input';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faPlus from '@fortawesome/fontawesome-free-solid/faPlus';
 import './CheckList.css';
+import _ from 'underscore';
 class CheckList extends Component {
     state = {
         showAddForm: false, checkList: [], newSubTask: {
+            "id": _.uniqueId('check'),
             "name": "",
             "evaluate": "",
             "cost": 0,
@@ -21,6 +23,16 @@ class CheckList extends Component {
         this.setState({
             checkList: [...this.props.list]
         })
+    };
+
+    isFinished = (id) => {
+        let newCheckList = [...this.state.checkList];
+        newCheckList.map(tasks => {
+            if (tasks.id == id)
+                tasks.finished = !tasks.finished
+        });
+
+        this.setState({checkList: newCheckList});
     };
 
     render() {
@@ -41,6 +53,7 @@ class CheckList extends Component {
                         this.setState({
                             checkList: [...this.state.checkList, this.state.newSubTask], newSubTask: {
                                 "name": "",
+                                "id": _.uniqueId('check'),
                                 "evaluate": "",
                                 "cost": 0,
                                 "status_bonus": "",
@@ -53,12 +66,11 @@ class CheckList extends Component {
                 <div className="listContainer">
                     <div className="listSubTask">
                         {this.state.checkList.map(sub => {
-                            return <div>
+                            return <div onClick={() => this.isFinished(sub.id)}>
 
                                 <span className="subtask finished">{sub.name}</span>
-                                {!sub.finished &&
+                                {sub.finished &&
                                 <Fragment>
-                                    <span class="highlight"></span>
                                     <span style={this.props.styleLightBar} class="bar"></span>
                                 </Fragment>
                                 }

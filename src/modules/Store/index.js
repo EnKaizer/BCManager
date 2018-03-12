@@ -12,6 +12,10 @@ class Store extends Component {
     await this.props.actionStore();
   };
 
+  componentDidMount = () => {
+      window.scrollTo(0, 0);
+  };
+
   render = () => {
     const { listStore } = this.props.StoreReducer;
     return (

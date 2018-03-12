@@ -77,10 +77,13 @@ export default class UnlockAchievement extends Component {
                 Conquista Desbloqueada
             </strong>
               <span style={{ fontSize: '9pt', color: '#5f5e5e' }}>
-                Parabéns pela primeira compra em nossa loja.
+                Parabéns por descobrir a ferramenta para troca de Projetos
             </span>
               <span
                 style={{
+                    bottom: 0,
+                  position: 'absolute',
+                  left: '50%',
                   fontSize: '14pt',
                   fontWeight: 'bold',
                   color: 'green',

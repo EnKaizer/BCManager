@@ -7,7 +7,7 @@ import { Actions } from './ducks';
 
 class Manager extends Component {
 
-    state = { unlock: false }
+    state = { unlock: false, createModal: false }
 
     componentWillMount = async () => {
         await this.props.getData();
@@ -33,15 +33,18 @@ class Manager extends Component {
 
         return (
             <Fragment>
-                <ModalPostIt />
+                <ModalPostIt projectId={this.props.projectSelected.id} show={this.state.createModal} close={() => this.setState({createModal: false})} list={[]}/>
                 <select onChange={this.handleChange} value={this.props.projectSelected.id}>
                     {this.props.projectList.map(prj =>
                         <option value={prj.id}>{prj.name}</option>)}
                 </select>
+                <button onClick={() => this.setState({createModal: true})}>
+                    Criar Nova Task
+                </button>
                 <UnlockAchievement closeAchievement={() => this.setState({ unlock: false })} Achievement={this.state.unlock} />
                 <div className="columnContainer">
                     {this.props.projectSelected.boards && this.props.projectSelected.boards.map(col => {
-                        return <Column id={col.id} onChange={this.props.changeColumn} name={col.name} canDragBool={this.props.canDragBool}
+                        return <Column projectId={this.props.projectSelected.id} id={col.id} onChange={this.props.changeColumn} board={this.props.projectSelected.boards} name={col.name} canDragBool={this.props.canDragBool}
                             tasks={col.tasks} />
                     })}
                 </div>
